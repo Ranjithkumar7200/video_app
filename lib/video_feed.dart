@@ -16,6 +16,31 @@ class VideoFeed extends StatelessWidget {
         likes: 250,
         thumbnail: 'assets/thumb.jpg',
         videoUrl: 'assets/short.mp4'),
+    Video(
+        username: 'User3',
+        likes: 250,
+        thumbnail: 'assets/codes.jpg',
+        videoUrl: 'assets/short.mp4'),
+    Video(
+        username: 'User4',
+        likes: 20,
+        thumbnail: 'assets/thumb.jpg',
+        videoUrl: 'assets/short.mp4'),
+    Video(
+        username: 'User5',
+        likes: 350,
+        thumbnail: 'assets/codes.jpg',
+        videoUrl: 'assets/short.mp4'),
+    Video(
+        username: 'User6',
+        likes: 250,
+        thumbnail: 'assets/thumb.jpg',
+        videoUrl: 'assets/short.mp4'),
+    Video(
+        username: 'User7',
+        likes: 20,
+        thumbnail: 'assets/codes.jpg',
+        videoUrl: 'assets/short.mp4'),
   ];
 
   @override

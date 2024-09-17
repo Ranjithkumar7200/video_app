@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors_in_immutables, library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 import 'video_feed.dart';
@@ -23,6 +25,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
         setState(() {});
         _controller.play();
       }).catchError((error) {
+        // ignore: avoid_print
         print('Video player error: $error');
       });
   }
@@ -36,7 +39,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red.withOpacity(0.3),
+      backgroundColor: Colors.black.withOpacity(0.3),
       body: Stack(
         children: [
           Center(
@@ -48,7 +51,17 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                 : CircularProgressIndicator(),
           ),
           Positioned(
-            bottom: 50,
+            top: 60,
+            left: 20,
+            child: IconButton(
+              icon: Icon(Icons.arrow_back_ios, color: Colors.white, size: 32),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+          ),
+          Positioned(
+            bottom: 60,
             left: 20,
             child: Row(
               children: [
